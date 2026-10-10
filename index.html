@@ -1,0 +1,15 @@
+<!doctype html>
+<!-- Page de retour de l'autorisation Withings (withings.py --configurer).
+     À publier telle quelle à une adresse https publique, enregistrée comme URL
+     de retour de l'appli sur developer.withings.com : Withings refuse localhost.
+     Elle renvoie le navigateur, avec le code reçu, vers le serveur local du
+     script. Aucune donnée personnelle, rien n'est envoyé ailleurs. -->
+<html lang="fr">
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Retour d'autorisation</title>
+<script>
+  if (location.search) location.replace("http://localhost:8765/withings" + location.search);
+</script>
+<p>Retour d'autorisation d'une appli personnelle. Rien à voir ici.</p>
+</html>
